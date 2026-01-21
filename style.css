@@ -127,3 +127,7 @@ p {
     text-align: left;
     padding: 5px 0;
 }
+
+ol {
+    list-style: lower-alpha;
+}
