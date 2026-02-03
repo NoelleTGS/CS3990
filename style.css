@@ -123,8 +123,7 @@ blockquote {
     padding: 10px 50px;
 }
 
-blockquote:before {
-    content: "\201C";
+blockquote:before, blockquote:after {
     font-size: 50px;
     display: block;
     background: #e4830d;
@@ -136,18 +135,13 @@ blockquote:before {
     margin-left: -50px;
 }
 
+blockquote:before {
+    content: "\201C";
+}
+
 blockquote:after {
     content: "\201D";
-    font-size: 50px;
     float: right;
-    display: block;
-    background: #e4830d;
-    width: 50px;
-    height: 50px;
-    text-align: center;
-    border-radius: 50%;
-    line-height: 50px;
-    margin-right: -50px;
 }
 
 blockquote:hover:before {
