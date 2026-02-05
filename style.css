@@ -30,11 +30,7 @@ article:first-of-type > div:hover {
     border: solid red;
 }
 
-article:hover > div:hover {
-    filter: opacity(1) !important;
-}
-
-article:hover > div {
+article:has(div:hover) > div:not(:hover) {
     filter: opacity(0.5);
 }
 
