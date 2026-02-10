@@ -1,0 +1,193 @@
+html, body {
+    margin: 0;
+    color: white;
+}
+
+header {
+    background-color: #4c066f;
+    text-align: center;
+    padding: 10px;
+}
+
+#main-container {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+
+#main-container > div {
+    flex: 1;
+}
+
+#facts {
+    margin-top: 10px;
+}
+
+#facts ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+#facts ul li {
+    margin: 10px;
+    background-color: #a550cf;
+    padding: 4px;
+}
+
+#facts ul li:hover {
+    background-color: #4b1566;
+    color: #a550cf;
+}
+
+#main {
+    flex: 2 !important;
+    margin-top: 10px;
+}
+
+#buttons {
+    display: flex;
+    gap: 10px;
+    perspective: 1000px;
+    perspective-origin: right;
+}
+
+#buttons > div {
+    color: #4c066f;
+    background-color: #a550cf;
+    border: 2px solid lightgray;
+    border-radius: 10px;
+    padding: 4px;
+    width: fit-content;
+    transform: rotateX(45deg);
+    box-shadow: 0 5px 5px black;
+    position: relative;
+}
+
+#buttons > div:hover {
+    transform: none;
+    color: white;
+    background-image: linear-gradient(#e38be6, #510a48);
+}
+
+#my-alberta:hover #dropdown {
+    display: flex;
+}
+
+#dropdown {
+    display: none;
+    position: absolute;
+    width: 100%;
+    flex-direction: column;
+    background-color: #a550cf;
+}
+
+#dropdown a {
+    padding: 10px;
+}
+
+#dropdown a:hover {
+    background-color: #4b1566;
+    color: #a550cf;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+section {
+    display: none;
+    color: #4b1566;
+}
+
+section:target {
+    display: block;
+}
+
+#section-map {
+    display: block;
+}
+
+#main:has(:target) #section-map {
+    display: none;
+}
+
+#main img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.square-km {
+    font-style: italic;
+    display: none;
+}
+
+#provinces div {
+    display: flex;
+    align-items: center;
+    gap: 3px;
+}
+
+#provinces div img {
+    height: 1em;
+    width: auto;
+    vertical-align: middle;
+}
+
+.province-name:hover .square-km {
+    display: inline;
+}
+
+#jobs-container {
+    background-color: #a550cf;
+    text-align: center;
+    padding: 10px;
+}
+
+#jobs {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.job {
+    flex: 1 1 0;
+    min-width: calc(50% - 5px);
+    max-width: calc(50% - 5px);
+}
+
+.job-title {
+    background-color: #9723d1;
+    padding: 30px 0;
+    border: 2px solid #666666;
+    border-top-right-radius: 20px;
+    position: relative;
+    font-weight: bold;
+}
+
+.job-title-banner {
+    position: absolute;
+    width: 80%;
+    top: 0;
+    left: 0;
+    border-top-right-radius: 30px;
+    border-bottom-right-radius: 30px;
+    text-align: left;
+}
+
+.job-pay {
+    float: right;
+}
+
+footer {
+    position: fixed;
+    width: 100%;
+    background-color: #a550cf;
+    color: black;
+    box-sizing: border-box;
+    padding: 10px;
+    bottom: 0;
+}
