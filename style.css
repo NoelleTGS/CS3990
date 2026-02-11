@@ -124,13 +124,13 @@ section:target {
     display: none;
 }
 
-#provinces div {
+#provinces li {
     display: flex;
     align-items: center;
     gap: 3px;
 }
 
-#provinces div img {
+#provinces li img {
     height: 1em;
     width: auto;
     vertical-align: middle;
