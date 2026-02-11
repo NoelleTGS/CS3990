@@ -176,6 +176,7 @@ section:target {
     border-top-right-radius: 30px;
     border-bottom-right-radius: 30px;
     text-align: left;
+    font-size: clamp(0px, 1vw, 1em);
 }
 
 .job-pay {
