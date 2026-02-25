@@ -1,0 +1,153 @@
+body {
+    margin: 0;
+    overflow-x: hidden;
+}
+
+header {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    background-image: url(img/tech1600a.webp);
+    background-size: cover;
+    place-items: center start;
+    padding: 30px;
+}
+
+header h1 {
+    color: #651fc1;
+    text-shadow: 1px 1px 2px #000000;
+}
+
+header p {
+    color: white;
+}
+
+header a {
+    border: none;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    padding: 5px;
+    box-shadow: 1px 1px 2px #000000;
+}
+
+#programs {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    margin: 20px;
+    gap: 5px;
+}
+
+.program {
+    border: 1px solid lightgray;
+    border-radius: 5px;
+    position: relative;
+    padding: 5px 5px 25px;
+}
+
+.program a {
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    padding: 5px;
+    box-sizing: border-box;
+    display: block;
+    width: fit-content;
+    position: absolute;
+    bottom: 5px;
+    left: 5px;
+}
+
+.program-image-card {
+    position: relative;
+}
+
+.program-image-card img {
+    display: block;
+    width: 100%;
+    aspect-ratio: 4/1;
+    object-fit: cover;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+.program-image-card span {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    padding: 10px;
+    background: rgba(0, 0, 0, 0.5);
+    box-sizing: border-box;
+    width: 100%;
+    height: 50%;
+    display: grid;
+    align-items: center;
+}
+
+.program-image-card em {
+    font-style: normal;
+    font-weight: bold;
+    color: white;
+}
+
+#courses {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 5px;
+}
+
+.course {
+    position: relative;
+    padding: 5px;
+}
+
+.course img {
+    display: block;
+    width: 100%;
+    aspect-ratio: 10/13;
+    object-fit: fill;
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.course img:hover {
+    transform: scale(1.2);
+}
+
+.course h2 {
+    text-align: center;
+    font-size: 1.2rem;
+}
+
+.course p {
+    text-align: center;
+    display: none;
+}
+
+.course:has(img:hover) p {
+    display: block;
+}
+
+footer {
+    color: white;
+    background-color: #04044e;
+    padding: 15px;
+    margin: 5px
+}
+
+
+
+
+
+a {
+    color: white;
+    background: #f9ae05;
+    text-decoration: none;
+    transition: 0.1s;
+}
+
+a:hover {
+    color: gray;
+    background: #f8d06a;
+    filter: opacity(0.8);
+}
