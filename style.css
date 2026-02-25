@@ -124,7 +124,7 @@ header a {
     display: none;
 }
 
-.course:has(img:hover) p {
+.course:hover p {
     display: block;
 }
 
