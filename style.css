@@ -1,0 +1,86 @@
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+#main {
+    background-color: #6f0505;
+    display:grid;
+    width: 100vw;
+    color: white;
+    text-align: center;
+    font-size: 1rem;
+
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(4, auto);
+    grid-template-areas:
+        "link1 link2 centre link3 link4"
+        "img1 img2 centre img3 img4"
+        "img5 img6 centre img7 img8"
+        "footer footer footer footer footer";
+    gap: 5px;
+    place-items: center;
+}
+
+.link {
+    background-color: #c35656;
+    width: 100%;
+    height: fit-content;
+    padding: 5px;
+    box-sizing: border-box;
+}
+
+.link a {
+    color: #6f0505;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.link a:hover {
+    color: #fff;
+    background-color: #c00b0b;
+}
+
+.img {
+    background-color: #c35656;
+    width: 100%;
+    height: fit-content;
+    padding: 5px;
+    box-sizing: border-box;
+    display: grid;
+}
+
+.img img {
+    display: block;
+    justify-self: center;
+    width: 70%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 15px;
+    box-sizing: border-box;
+    border: 3px solid transparent;
+}
+
+.img img:hover {
+    border: 3px solid #fff;
+}
+
+#centre {
+    grid-area: centre;
+
+    background-color: #9acd32;
+    padding: 5px;
+}
+
+footer {
+    grid-area: footer;
+
+    background-color: #856161;
+    padding: 5px;
+}
+
+footer:hover:after {
+    content: "Go to Lorum Ipsum heading";
+    font-size: 0.75rem;
+    font-style: italic;
+}
