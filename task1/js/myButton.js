@@ -6,7 +6,6 @@ export class Button {
     }
 
     show() {
-        console.log(this.btnTitle);
         document.write(`<button style="background-color: ${this.btnBgColor}" title="${this.btnTitle}">${this.btnText}</button>`);
     }
 }
