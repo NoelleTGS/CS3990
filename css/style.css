@@ -1,0 +1,105 @@
+:root {
+    --primary-color: #ABCDEF;
+}
+
+html, body {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+}
+
+body {
+    background-color: var(--primary-color);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#start-game {
+    background: linear-gradient(lightblue, mediumpurple);
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: 1px solid black;
+    font-size: 18px;
+    filter: drop-shadow(2px 2px 2px black);
+    margin: 5px;
+}
+
+#start-game:hover {
+    background: linear-gradient(mediumpurple, lightblue);
+}
+
+#game-container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#game-container > p {
+    text-align: center;
+}
+
+#board {
+    width: min(calc(100% - 40px), 1200px);
+    display: grid;
+    border: 2px solid black;
+    border-radius: 5px;
+    padding: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(272px, 1fr));
+    gap: 20px;
+    background: linear-gradient(mediumpurple, lightblue);
+}
+
+.card {
+    perspective: 1000px;
+    height: 200px;
+    filter: drop-shadow(2px 2px 2px black);
+}
+
+.card h1 {
+    margin: 0;
+    font-size: 18px;
+    text-align: center;
+}
+
+.card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    transition: transform 0.2s;
+}
+
+/* !!! card-front is where the content is displayed !!! */
+
+.card-front, .card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border: 2px solid black;
+    border-radius: 10px;
+}
+
+.card-front {
+    background-color: lightcoral;
+}
+
+.card-back {
+    transform: rotateY(180deg);
+    background-color: slategray;
+    padding: 10px;
+    box-sizing: border-box;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.card.flipped .card-inner {
+    transform: rotateY(180deg);
+}
